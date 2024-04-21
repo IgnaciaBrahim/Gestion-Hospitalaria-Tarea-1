@@ -253,7 +253,25 @@ void atender_paciente(List *lista)
     
     case 's':
       dato = list_popFront(lista);
-      printf("El paciente %s ha sido atendido\n", dato->nombre);
+      printf("Se atendió al paciente %s\n", dato->nombre);
+      printf("Edad: %d\n", dato->edad);
+      printf("Sintoma: %s\n", dato->sintoma);
+      printf("Hora de llegada: %s\n", dato->hora);
+      printf("Prioridad: ");
+      if (dato->prioridad == 1)
+      {
+        printf("ALTA\n");
+      }
+      else if (dato->prioridad == 2)
+      {
+        printf("MEDIA\n");
+      }
+      else
+      {
+        printf("ALTA\n");
+      }
+      //no pude reutilizar la función porque me pedía el contador.
+      printf("El paciente se eliminó de la lista de espera\n");
       free(dato);
       break;
     default:

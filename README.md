@@ -42,8 +42,9 @@ En el programa podrás encontrar un menú con las siguientes funcionalidades:
 El único problema conocido, es que si no se ingresa la hora en el formato especificado, no se asegura que se ordenen por prioridad y luego por hora los pacientes (ordenamiento esperado en una lista de espera). Esto se debe que al ordenar, en cuanto a la hora se utiliza la función strcmp de la librería string.h de C. Si es que se ingresa por ejemplo la hora 9:15, esta hora será mayor a la hora 16:15, ya que primero compara el 9 con el 1, y retornará que el 9 es mayor. El problema se resuelve al anteponer el 0 a las horas antes de las 10 AM, ya que se comparará 0 con 1, y el 1 será mayor.
 
 `Ejemplo: `
+![Imagen problema horario](fotos-ejemplo/Captura de pantalla 2024-04-21 174859.png)
 
-
+Se puede observar que la hora 9 está abajo de la hora 21, incluso en prioridad igual.
 ### A mejorar:
 
 ## Ejemplo de uso e interacción:
