@@ -42,13 +42,61 @@ En el programa podrás encontrar un menú con las siguientes funcionalidades:
 El único problema conocido, es que si no se ingresa la hora en el formato especificado, no se asegura que se ordenen por prioridad y luego por hora los pacientes (ordenamiento esperado en una lista de espera). Esto se debe que al ordenar, en cuanto a la hora se utiliza la función strcmp de la librería string.h de C. Si es que se ingresa por ejemplo la hora 9:15, esta hora será mayor a la hora 16:15, ya que primero compara el 9 con el 1, y retornará que el 9 es mayor. El problema se resuelve al anteponer el 0 a las horas antes de las 10 AM, ya que se comparará 0 con 1, y el 1 será mayor.
 
 `Ejemplo: `
-![Imagen problema horario](fotos-ejemplo/Captura de pantalla 2024-04-21 174859.png)
+
+![Captura de pantalla 2024-04-21 174859](https://github.com/IgnaciaBrahim/Gestion-Hospitalaria-Tarea-1/assets/137849174/43f5be45-a9d1-48ec-abae-ff3af32cba3a)
 
 Se puede observar que la hora 9 está abajo de la hora 21, incluso en prioridad igual.
+
 ### A mejorar:
 
+1) No es un problema, pero el programa fallará si se ingresan nombres y síntomas mayores a 30 caracteres, y horas con más de 5 caracteres. También, podría compararse horas y minutos aparte para evitar el problema de anteponer 0, ya que 9 < 16.
+2) Implementar una interfaz de usuario más amigable en general.
+3) Permitir insertar los datos a partir de un archivo csv, ya que para grandes cantidades de pacientes es costoso registrarlos a todos.
+4) Permitir la edición de los datos de los pacientes, ya que pueden haber errores en el ingreso y su eliminación es difícil.
+5) Permitir eliminar pacientes de la lista sin razón.
+   
 ## Ejemplo de uso e interacción:
-?? fotos
+Para poder interactuar con el programa, deberás apretar el botón "Run" y luego ir al apartado "Console" para poder ingresar datos:
+
+![Captura de pantalla 2024-04-21 180426](https://github.com/IgnaciaBrahim/Gestion-Hospitalaria-Tarea-1/assets/137849174/6624cf3e-8f0e-49f3-b82a-76ad20cb9482)
+
+`1) Registrar paciente: `
+
+![Captura de pantalla 2024-04-21 180053](https://github.com/IgnaciaBrahim/Gestion-Hospitalaria-Tarea-1/assets/137849174/88ddd2fd-a17f-4957-bb01-78ebdfe9e843)
+
+Se ingresa a la paciente "Ana", paciente que acaba de ingresar al hospital. Su prioridad se asigna automáticamente a baja.
+
+`2) Asignar prioridad: `
+
+![Captura de pantalla 2024-04-21 180120](https://github.com/IgnaciaBrahim/Gestion-Hospitalaria-Tarea-1/assets/137849174/23caaf7e-5de8-4288-844b-197f4c445d00)
+
+A la misma paciente, Ana, se le reasigna a la prioridad "ALTO", ya que su caso era grave. Así, se asegura que la atenderán pronto.
+
+`3) Mostrar la lista de espera: `
+
+![Captura de pantalla 2024-04-21 180151](https://github.com/IgnaciaBrahim/Gestion-Hospitalaria-Tarea-1/assets/137849174/4a12db5c-8c93-4e1d-8c92-3440bcdd379c)
+
+Se muestra la lista de espera, en la que por el momento solo se encuentra la paciente Ana.
+
+`5) Mostrar pacientes por prioridad: `
+
+Si seleccionamos la prioridad "ALTO", podremos ver que Ana se encuentra en esa prioridad.
+
+![Captura de pantalla 2024-04-21 180246](https://github.com/IgnaciaBrahim/Gestion-Hospitalaria-Tarea-1/assets/137849174/4a5f0d2d-3256-48c8-9c0a-b688f7f0743a)
+
+`4) Atender al siguiente paciente: `
+
+Se visualiza la lista de espera del hospital, en donde Ana es la única paciente y está primero en la lista. Al atenderla, se elimina de la lista de pacientes.
+
+![Captura de pantalla 2024-04-21 180307](https://github.com/IgnaciaBrahim/Gestion-Hospitalaria-Tarea-1/assets/137849174/5798b5b6-5775-4c3d-b8b5-c4a009019ab9)
+
+`6) Salir: `
+
+![Captura de pantalla 2024-04-21 180321](https://github.com/IgnaciaBrahim/Gestion-Hospitalaria-Tarea-1/assets/137849174/8417d4c4-a1fe-42e2-b49a-c1efa6d4bf8d)
+
+Para salir del sistema, se selecciona la opción 6. No se podrá volver a acceder a los datos que se habían ingresado antes.
+
+
 
 
 
