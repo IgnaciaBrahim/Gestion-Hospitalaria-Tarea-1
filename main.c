@@ -298,7 +298,7 @@ void mostrar_prioridad(List *lista, int prioridad)
   return;
 }
 
-//Función que controla la función mostrar_prioridad. Se le pide al usuario que seleccione la prioridad que quiera ver de los pacientes en espera. Según la respuesta, llama a la otra función.
+//Función que controla la función mostrar_prioridad. Se le pide al usuario que seleccione la prioridad que quiera ver de los pacientes en espera. Según la respuesta, llama a la otra función. 
 void mostrar_lista_prioridad(List *lista)
 {
   tipo_paciente *dato = list_first(lista);
