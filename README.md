@@ -8,8 +8,7 @@ Este sistema permite a los usuarios gestionar la atención de pacientes en un ho
 blablabla
 
 ## Funcionalidades
-'inline' blablabla
-'2' blabla
+`Inline code` with backticks 
 
 ### Funcionando correctamente
 ?
